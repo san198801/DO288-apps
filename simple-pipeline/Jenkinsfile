@@ -26,7 +26,8 @@ stage('stage2'){
 steps {
 sh 'echo hello from starge 2!'}
 }
-stage('stage3'){
+
+stage('manual approval'){
 steps {
 timeout(time: 60, unit: 'MINUTES'){input message: "Move to stage 3?"}
 }
